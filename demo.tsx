@@ -516,8 +516,8 @@ class Server {
     this.app = new Application();
   }
 
-  start(port: number) {
-    this.app.start({ port });
+  start() {
+    addEventListener("fetch", this.app.fetchEventHandler());
   }
 
   registerApiRoutes(api: API) {
@@ -530,7 +530,7 @@ api.registerRoutes();
 
 const server = new Server();
 server.registerApiRoutes(api);
-server.start(3000);
+server.start();
 
 // Backoffice GUI using Vno
 function Backoffice() {
