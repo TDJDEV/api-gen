@@ -1,5 +1,5 @@
 import { render, html, serve } from "https://cdn.skypack.dev/vno?dts";
-import { Backoffice } from "./backoffice.ts";
+import { Backoffice } from "./backoffice.tsx";
 import { API } from "./api.ts";
 
 const api = new API();
